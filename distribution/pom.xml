@@ -61,11 +61,6 @@ LICENSE file.
     </dependency>
     <dependency>
       <groupId>site.ycsb</groupId>
-      <artifactId>cassandra-binding</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>site.ycsb</groupId>
       <artifactId>cloudspanner-binding</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -78,7 +73,12 @@ LICENSE file.
       <groupId>site.ycsb</groupId>
       <artifactId>couchbase2-binding</artifactId>
       <version>${project.version}</version>
-		</dependency>
+    </dependency>
+    <dependency>
+      <groupId>site.ycsb</groupId>
+      <artifactId>couchdb-binding</artifactId>
+      <version>${project.version}</version>
+    </dependency>
     <dependency>
       <groupId>site.ycsb</groupId>
       <artifactId>crail-binding</artifactId>
@@ -171,16 +171,6 @@ LICENSE file.
     </dependency>
     <dependency>
       <groupId>site.ycsb</groupId>
-      <artifactId>maprdb-binding</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>site.ycsb</groupId>
-      <artifactId>maprjsondb-binding</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>site.ycsb</groupId>
       <artifactId>mongodb-binding</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -192,6 +182,11 @@ LICENSE file.
     <dependency>
       <groupId>site.ycsb</groupId>
       <artifactId>orientdb-binding</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>site.ycsb</groupId>
+      <artifactId>pacodb-binding</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
@@ -242,6 +237,11 @@ LICENSE file.
     <dependency>
       <groupId>site.ycsb</groupId>
       <artifactId>solr7-binding</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>site.ycsb</groupId>
+      <artifactId>surrealdb-binding</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>

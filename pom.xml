@@ -164,10 +164,10 @@ LICENSE file.
     <module>asynchbase</module>
     <module>azurecosmos</module>
     <module>azuretablestorage</module>
-    <module>cassandra</module>
     <module>cloudspanner</module>
     <module>couchbase</module>
-		<module>couchbase2</module>
+    <module>couchbase2</module>
+    <module>couchdb</module>
 		<module>crail</module>
     <module>dynamodb</module>
     <module>elasticsearch</module>
@@ -183,12 +183,11 @@ LICENSE file.
     <module>infinispan</module>
     <module>jdbc</module>
     <module>kudu</module>
-    <module>maprdb</module>
-    <module>maprjsondb</module>
     <module>memcached</module>
     <module>mongodb</module>
     <module>nosqldb</module>
     <module>orientdb</module>
+    <module>pacodb</module>
     <module>postgrenosql</module>
     <module>rados</module>
     <module>redis</module>
@@ -199,6 +198,7 @@ LICENSE file.
     <module>seaweedfs</module>
     <module>scylla</module>
     <module>solr7</module>
+    <module>surrealdb</module>
     <module>tarantool</module>
     <module>tablestore</module>
     <module>voltdb</module>
@@ -255,10 +255,6 @@ LICENSE file.
         <executions>
           <execution>
             <id>validate</id>
-            <phase>validate</phase>
-            <goals>
-              <goal>check</goal>
-            </goals>
             <configuration>
               <configLocation>checkstyle.xml</configLocation>
             </configuration>
