@@ -1,7 +1,15 @@
 package site.ycsb.db;
 
+import org.codehaus.jackson.map.ObjectMapper;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import site.ycsb.ByteIterator;
+import site.ycsb.DB;
+import site.ycsb.DBException;
+import site.ycsb.Status;
+
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
 import java.net.http.HttpClient;
@@ -9,38 +17,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.*;
 
-import com.google.gson.Gson;
-import com.google.gson.internal.LinkedTreeMap;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-import site.ycsb.*;
-
-/*
- * Copyright 2013 KU Leuven Research and Development - iMinds - Distrinet
- * 
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- * http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * 
- * Administrative Contact: dnet-project-office@cs.kuleuven.be
- * Technical Contact: arnaud.schoonjans@student.kuleuven.be
- */
 public class PacodbClient extends DB{
-	
-	// Default configuration
-	private static final String DEFAULT_DATABASE_NAME = "usertable";
-	private static final String PROTOCOL = "http";
-
   private static final String HOST_NAME = "http://localhost:49494";
 
   private static final ObjectMapper mapper = new ObjectMapper();
@@ -91,19 +68,7 @@ public class PacodbClient extends DB{
 	@Override
 	public Status scan(String table, String startkey, int recordcount,
                      Set<String> fields, Vector<HashMap<String, ByteIterator>> result) {
-//		List<StringToStringMap> viewResult = this.executeView(startkey, recordcount);
-//		for(StringToStringMap row: viewResult){
-//			JSONObject jsonObj = this.parseAsJsonObject(String.valueOf(row));
-//			if(jsonObj == null)
-//				return Status.ERROR;
-//			if(fields == null){
-//				@SuppressWarnings("unchecked")
-//				Set<String> requestedFields = jsonObj.keySet();
-//				result.add(this.getFieldsFromJsonObj(requestedFields, jsonObj));
-//			}else{
-//				result.add(this.getFieldsFromJsonObj(fields, jsonObj));
-//			}
-//		}
+    //Not implemented in the basic self-written database
 		return Status.OK;
 	}
 	private JSONObject parseAsJsonObject(String stringToParse){
