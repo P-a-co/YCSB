@@ -188,7 +188,8 @@ public class SurrealdbClient extends DB{
 	@Override
 	public Status insert(String table, String key,
 			Map<String, ByteIterator> values) {
-    LinkedTreeMap dataToInsert = (LinkedTreeMap) Map.copyOf(values);
+    var dataToInsert = new LinkedTreeMap();
+    dataToInsert.putAll(values);
 		return this.executeWriteOperation(key, dataToInsert);
 	}
 
